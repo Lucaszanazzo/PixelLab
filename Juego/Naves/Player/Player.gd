@@ -16,8 +16,7 @@ func _integrate_forces(_state: Physics2DDirectBodyState) -> void:
 	apply_central_impulse(empuje.rotated(rotation))
 	apply_torque_impulse(dir_rotacion * potencia_rotacion)
 
-
-func _procees(_delta: float) -> void:
+func _process(delta):
 	player_input()
 
 ## Metodos custom 
