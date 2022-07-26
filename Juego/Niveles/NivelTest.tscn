@@ -6,8 +6,3 @@
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 388, 173 )
-gravity_scale = 0.0
-
-[node name="Player2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 398, 358 )
-gravity_scale = 0.0
