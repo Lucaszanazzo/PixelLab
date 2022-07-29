@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/playergreen.png-5967a568eb32217e9ed7053781c8ab5f.stex"
+path="res://.import/glowing_circle.png-36a8cbd1d0e362a489bfabfb22128fa5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Juego/Naves/player_test/playergreen.png"
-dest_files=[ "res://.import/playergreen.png-5967a568eb32217e9ed7053781c8ab5f.stex" ]
+source_file="res://Juego/Proyectiles/Laser/glowing_circle.png"
+dest_files=[ "res://.import/glowing_circle.png-36a8cbd1d0e362a489bfabfb22128fa5.stex" ]
 
 [params]
 
