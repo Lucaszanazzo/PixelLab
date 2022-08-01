@@ -62,6 +62,8 @@ func _integrate_forces(_state: Physics2DDirectBodyState) -> void:
 func _process(_delta):
 	player_input()
 
+func destruir():
+	controlador_estados(ESTADO.MUERTO)
 
 
 ## Metodos custom 
@@ -78,6 +80,7 @@ func controlador_estados(nuevo_estado: int):
 		ESTADO.MUERTO:
 			colisionador.set_deferred("disable", true)
 			canion.set_puede_disparar(false)
+			Eventos.emit_signal("nave_destruida", global_position, 2)
 			queue_free()
 		_:
 			printerr("Error de estado")

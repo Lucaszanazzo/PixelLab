@@ -68,11 +68,9 @@ position = Vector2( -2, 33 )
 stream = SubResource( 2 )
 
 [node name="LaserBeam2D" parent="." instance=ExtResource( 5 )]
-visible = false
 position = Vector2( 39, 0 )
 
 [node name="EstelaPuntoInicio" type="Position2D" parent="."]
-visible = false
 position = Vector2( -13, 0 )
 __meta__ = {
 "_edit_group_": true
