@@ -2,11 +2,11 @@
 
 [ext_resource path="res://Juego/Proyectiles/canion/sfx_disparo.tres" type="AudioStream" id=1]
 [ext_resource path="res://Juego/Proyectiles/canion/Canion.gd" type="Script" id=2]
-[ext_resource path="res://Juego/Proyectiles/Proyectil.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Juego/Proyectiles/ProyectilPlayer.tscn" type="PackedScene" id=4]
 
 [node name="Canion" type="Node2D"]
 script = ExtResource( 2 )
-proyectil = ExtResource( 3 )
+proyectil = ExtResource( 4 )
 cadencia_disparo = 0.25
 velocidad_proyectil = 1000
 
@@ -21,5 +21,4 @@ bus = "Disparo"
 [node name="TimerEnfriamiento" type="Timer" parent="."]
 one_shot = true
 
-[connection signal="finished" from="DisparoSFX" to="." method="_on_DisparoSFX_finished"]
 [connection signal="timeout" from="TimerEnfriamiento" to="." method="_on_TimerEnfriamiento_timeout"]

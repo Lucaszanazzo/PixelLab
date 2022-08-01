@@ -3,7 +3,7 @@ class_name Canion
 extends Node2D
 
 ## Atributos export
-export var proyectil:PackedScene = null
+export var proyectil: PackedScene = null
 export var cadencia_disparo:float = 0.8
 export var velocidad_proyectil:int = 100
 export var danio_proyectil:int = 1
@@ -13,6 +13,7 @@ onready var timer_enfriamiento:Timer = $TimerEnfriamiento
 onready var disparo_sfx:AudioStreamPlayer = $DisparoSFX
 onready var esta_enfriado:bool = true
 onready var esta_disparando:bool = false setget set_esta_disparando
+
 
 ## Atributos 
 var puntos_disparo: Array = []
@@ -37,10 +38,10 @@ func almacenar_puntos_disparo():
 
 func disparar():
 	esta_enfriado = false
+	disparo_sfx.play()
 	timer_enfriamiento.start()
 	for punto_disparo in puntos_disparo:
-		disparo_sfx.play()
-		var new_proyectil: Proyectil =  proyectil.instance()
+		var new_proyectil: Proyectil = proyectil.instance()
 		new_proyectil.crear(
 			punto_disparo.global_position,
 			get_owner().rotation,
@@ -54,5 +55,3 @@ func _on_TimerEnfriamiento_timeout():
 	esta_enfriado = true
 
 
-func _on_DisparoSFX_finished():
-	disparo_sfx.stop()

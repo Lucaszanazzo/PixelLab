@@ -22,4 +22,4 @@ func crear_contenedores():
 
 
 func _on_disparo(proyectil: Proyectil):
-	add_child(proyectil)
+	contenedor_proyectiles.add_child(proyectil)
