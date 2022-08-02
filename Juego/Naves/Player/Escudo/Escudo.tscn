@@ -238,16 +238,19 @@ shape = SubResource( 1 )
 
 [node name="EspriteComplejo" type="Sprite" parent="."]
 visible = false
+modulate = Color( 0.03, 2.5, 0.03, 1 )
 rotation = 1.5708
 texture = ExtResource( 3 )
 
 [node name="SpriteAbriendo" type="Sprite" parent="."]
 visible = false
+modulate = Color( 0.03, 2.3, 0.03, 1 )
 rotation = 1.5708
 texture = ExtResource( 1 )
 
 [node name="SpriteAbirendo2" type="Sprite" parent="."]
 visible = false
+modulate = Color( 0.03, 2.4, 0.03, 1 )
 rotation = 1.5708
 texture = ExtResource( 2 )
 
