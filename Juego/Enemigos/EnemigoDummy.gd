@@ -4,7 +4,7 @@ extends Area2D
 ##Atributos
 var hitpoints: float = 10.0
 
-func _process(delta):
+func _process(_delta):
 	$Canion.set_esta_disparando(true)
 
 func _on_EnemigoDummy_body_entered(body):

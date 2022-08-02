@@ -12,6 +12,7 @@ explosion = ExtResource( 4 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 464, 305 )
+potencia_rotacion = 250
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource( 3 )
