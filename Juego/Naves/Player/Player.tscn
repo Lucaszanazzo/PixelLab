@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Juego/Naves/Player/player_orange.png" type="Texture" id=1]
 [ext_resource path="res://Juego/Naves/Player/Player.gd" type="Script" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Juego/Naves/Player/Estela/Trail2D.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Juego/Naves/Player/Motor/MotorSFX.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Juego/Naves/Player/ImpactoDaño.tres" type="AudioStream" id=8]
+[ext_resource path="res://Juego/Naves/Player/Escudo/Escudo.tscn" type="PackedScene" id=9]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 35.0
@@ -100,6 +101,9 @@ anims/spawn = SubResource( 3 )
 stream = ExtResource( 8 )
 bus = "Impacto"
 
+[node name="Escudo" parent="." instance=ExtResource( 9 )]
+
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 
 [editable path="Canion"]
+[editable path="Escudo"]
