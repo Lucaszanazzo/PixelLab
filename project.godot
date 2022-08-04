@@ -29,6 +29,21 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Juego/Naves/Player/Estela/Trail2D.gd"
 }, {
+"base": "Node2D",
+"class": "ExplosionMeteorito",
+"language": "GDScript",
+"path": "res://Juego/Explosiones/Explosion meteoro/ExplosionMeteorito.gd"
+}, {
+"base": "RigidBody2D",
+"class": "Meteorito",
+"language": "GDScript",
+"path": "res://Juego/Meteoros/Meteorito.gd"
+}, {
+"base": "Position2D",
+"class": "MeteoritoSpawner",
+"language": "GDScript",
+"path": "res://Juego/Meteoros/MeteoritosSpawner.gd"
+}, {
 "base": "AudioStreamPlayer2D",
 "class": "Motor",
 "language": "GDScript",
@@ -59,6 +74,9 @@ _global_script_class_icons={
 "EnemigoDummy": "",
 "Escudo": "",
 "Estela": "",
+"ExplosionMeteorito": "",
+"Meteorito": "",
+"MeteoritoSpawner": "",
 "Motor": "",
 "Nivel": "",
 "Player": "",

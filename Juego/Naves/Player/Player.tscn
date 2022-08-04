@@ -46,6 +46,7 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
+potencia_rotacion = 250
 
 [node name="Sprite" type="Sprite" parent="."]
 rotation = 1.5708

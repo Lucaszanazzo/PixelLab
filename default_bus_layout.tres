@@ -30,5 +30,5 @@ bus/5/name = "Impacto"
 bus/5/solo = false
 bus/5/mute = false
 bus/5/bypass_fx = false
-bus/5/volume_db = -17.6645
+bus/5/volume_db = -25.7676
 bus/5/send = "Master"
