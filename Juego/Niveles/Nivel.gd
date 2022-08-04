@@ -12,7 +12,6 @@ onready var contenedor_proyectiles: Node
 onready var contenedor_meteoritos: Node
 
 
-
 ## Metodos
 func _ready():
 	conectar_seniales()

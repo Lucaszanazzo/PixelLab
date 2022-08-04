@@ -125,3 +125,9 @@ func player_input() -> void:
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "spawn":
 		controlador_estados(ESTADO.VIVO)
+
+
+func _on_Player_body_entered(body: Node) -> void:
+	if body is Meteorito: 
+		body.destruir()
+		destruir()

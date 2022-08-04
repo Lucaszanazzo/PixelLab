@@ -33,13 +33,16 @@ func crear(pos: Vector2, dir: Vector2, tamanio: float) -> void:
 	forma_colision.radius= radio
 	$CollisionShape2D.shape = forma_colision
 	#Calcular velocidades
-	linear_velocity = vel_lineal_base * dir / tamanio
-	angular_velocity = vel_angular_base/ tamanio
+	linear_velocity = (vel_lineal_base * dir / tamanio) * aleatorizar_velocidad()
+	angular_velocity = (vel_angular_base/ tamanio) * aleatorizar_velocidad()
 	hitpoints = hitpoints_base * tamanio
-	#Solo Debug
-	print("hitpoinst ", hitpoints)
+
 
 ##MEtodos Custom 
+func aleatorizar_velocidad() -> float: 
+	randomize()
+	return rand_range(0.2, 0.9)
+
 func recibir_danio(danio: float) -> void:
 	hitpoints -= danio
 	if hitpoints <= 0.0:
