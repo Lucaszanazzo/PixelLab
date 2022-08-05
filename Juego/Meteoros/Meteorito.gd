@@ -10,20 +10,23 @@ export var hitpoints_base: float = 10.0
 
 ## Atributos 
 var hitpoints: float
+var esta_en_sector: bool = true  setget  set_esta_en_sector
+var pos_spawn_original: Vector2
+var vel_spawn_original: Vector2
 
 ## Onready var 
 onready var impacto_sfx: AudioStreamPlayer = $impacto_SFX
 onready var animacion_impacto: AnimationPlayer = $AnimationPlayer
 
 
-
-##Metodos
-func _ready():
-	angular_velocity = vel_angular_base
+## Setters y Getters 
+func set_esta_en_sector(valor: bool) -> void:
+	esta_en_sector = valor
 
 ## Constructor 
 func crear(pos: Vector2, dir: Vector2, tamanio: float) -> void:
 	position = pos 
+	pos_spawn_original = position
 	#Calcular Masa, tamaño de Sprite y Colisionador
 	mass *= tamanio
 	$Sprite.scale = Vector2.ONE * tamanio
@@ -34,9 +37,23 @@ func crear(pos: Vector2, dir: Vector2, tamanio: float) -> void:
 	$CollisionShape2D.shape = forma_colision
 	#Calcular velocidades
 	linear_velocity = (vel_lineal_base * dir / tamanio) * aleatorizar_velocidad()
+	vel_spawn_original = linear_velocity
 	angular_velocity = (vel_angular_base/ tamanio) * aleatorizar_velocidad()
 	hitpoints = hitpoints_base * tamanio
 
+##Metodos
+func _ready():
+	angular_velocity = vel_angular_base
+
+func _integrate_forces(state: Physics2DDirectBodyState) -> void:
+	if esta_en_sector:
+		return
+	
+	var mi_transform: = state.get_transform()
+	mi_transform.origin = pos_spawn_original
+	linear_velocity = vel_spawn_original
+	state.set_transform(mi_transform)
+	esta_en_sector = true
 
 ##MEtodos Custom 
 func aleatorizar_velocidad() -> float: 
