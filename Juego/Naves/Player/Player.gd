@@ -121,6 +121,7 @@ func player_input() -> void:
 	if Input.is_action_just_released("diparo_principal"):
 		canion.set_esta_disparando(false)
 
+
 ## Señales internas 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "spawn":

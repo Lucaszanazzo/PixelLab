@@ -21,6 +21,7 @@ explosion = ExtResource( 4 )
 meteorito = ExtResource( 6 )
 explosion_meteorito = ExtResource( 7 )
 sector_meteoritos = ExtResource( 9 )
+tiempo_transicion_camara = 1.0
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 750, 764 )

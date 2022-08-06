@@ -3,5 +3,3 @@ extends CamaraJuego
 
 
 
-
-
