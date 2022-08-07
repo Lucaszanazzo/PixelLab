@@ -61,8 +61,8 @@ func _on_AreaRecarga_body_entered(body: Node) -> void:
 	body.set_gravity_scale(0.1)
 
 
+func _on_AreaRecarga_body_exited(body: Node) -> void:
+	if body is Player: 
+		player_en_zona = false
 
-func _on_AreaRecarga_body_shape_exited(_body_rid: RID, body: Node, _body_shape_index: int, _local_shape_index: int) -> void:
 	body.set_gravity_scale(0.0)
-	player_en_zona = false
-

@@ -80,12 +80,22 @@ func transicion_camaras(desde: Vector2, hasta:Vector2, camara_actual: Camera2D, 
 	camara_actual.current = true
 	$TweenCamara.start()
 
+func crear_posicion_aleatoria(rango_horizontal: float, rango_vertical: float) -> Vector2:
+	randomize()
+	var rand_x = rand_range(-rango_horizontal, rango_horizontal)
+	var rand_y = rand_range(-rango_vertical, rango_vertical)
+	
+	return Vector2(rand_x, rand_y)
 
 ## Conexion Señales Externas
 func _on_disparo(proyectil: Proyectil):
 	contenedor_proyectiles.add_child(proyectil)
 
-func _on_nave_destruida(posicion: Vector2, num_explosiones: int):
+func _on_nave_destruida(nave: Player, posicion: Vector2, num_explosiones: int) ->void:
+	if nave is Player: 
+		transicion_camaras(posicion, posicion + crear_posicion_aleatoria(-200.0, 200.0),
+		camara_nivel, tiempo_transicion_camara)
+	
 	for _i in range(num_explosiones):
 		var new_explosion: Node2D = explosion.instance()
 		new_explosion.global_position = posicion

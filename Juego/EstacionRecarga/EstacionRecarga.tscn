@@ -160,4 +160,4 @@ bus = "Estacion"
 
 [connection signal="body_entered" from="AreaColision" to="." method="_on_AreaColision_body_entered"]
 [connection signal="body_entered" from="AreaRecarga" to="." method="_on_AreaRecarga_body_entered"]
-[connection signal="body_shape_exited" from="AreaRecarga" to="." method="_on_AreaRecarga_body_shape_exited"]
+[connection signal="body_exited" from="AreaRecarga" to="." method="_on_AreaRecarga_body_exited"]
