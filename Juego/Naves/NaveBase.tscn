@@ -27,4 +27,4 @@ danio_proyectil = 2
 stream = ExtResource( 8 )
 bus = "Impacto"
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="." to="." method="_on_Player_body_entered"]

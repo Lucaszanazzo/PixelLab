@@ -27,7 +27,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.2, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0.8, 0.8 ) ]
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0.7, 0.7 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Sprite:visible")
@@ -79,25 +79,24 @@ tracks/4/keys = {
 }
 
 [sub_resource type="CircleShape2D" id=5]
-radius = 564.554
+radius = 455.004
 
 [sub_resource type="CircleShape2D" id=6]
-radius = 530.182
+radius = 363.088
 
 [node name="EnemigoInterceptor" instance=ExtResource( 1 )]
 z_index = 40
 z_as_relative = false
 collision_layer = 2
-collision_mask = 76
+collision_mask = 111
 physics_material_override = ExtResource( 6 )
 contacts_reported = 2
 contact_monitor = true
 script = ExtResource( 4 )
 
 [node name="Sprite" parent="." index="0"]
-visible = false
 rotation = 1.5708
-scale = Vector2( 1e-05, 1e-05 )
+scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" parent="." index="1"]
@@ -108,6 +107,7 @@ shape = SubResource( 4 )
 proyectil = ExtResource( 5 )
 cadencia_disparo = 1.2
 velocidad_proyectil = 1200
+danio_proyectil = 1
 
 [node name="PuntoIzquierdo" parent="Canion" index="0"]
 position = Vector2( 20, -28 )
@@ -123,21 +123,23 @@ autoplay = "spawn"
 anims/spawn = SubResource( 3 )
 
 [node name="SpriteSpawn" type="Sprite" parent="." index="5"]
-scale = Vector2( 1e-05, 1e-05 )
+visible = false
+modulate = Color( 1, 1, 1, 0.0117647 )
 texture = ExtResource( 2 )
 
 [node name="AreaDisparo" type="Area2D" parent="." index="6"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaDisparo" index="0"]
-visible = false
 shape = SubResource( 5 )
 
 [node name="AreaDeteccion" type="Area2D" parent="." index="7"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaDeteccion" index="0"]
-visible = false
 shape = SubResource( 6 )
 
-[connection signal="body_entered" from="." to="." method="_on_Player_body_entered"]
+[connection signal="body_entered" from="AreaDisparo" to="." method="_on_AreaDisparo_body_entered"]
+[connection signal="body_exited" from="AreaDisparo" to="." method="_on_AreaDisparo_body_exited"]
+[connection signal="body_entered" from="AreaDeteccion" to="." method="_on_AreaDeteccion_body_entered"]
+[connection signal="body_exited" from="AreaDeteccion" to="." method="_on_AreaDeteccion_body_exited"]
 
 [editable path="Canion"]

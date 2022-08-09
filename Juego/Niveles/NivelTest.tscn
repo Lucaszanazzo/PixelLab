@@ -20,13 +20,19 @@ meteorito = ExtResource( 6 )
 explosion_meteorito = ExtResource( 7 )
 sector_meteoritos = ExtResource( 9 )
 tiempo_transicion_camara = 1.0
+enemigo_interceptor = ExtResource( 12 )
 
 [node name="TiggersLluviaMeteoritos" type="Node2D" parent="."]
 
 [node name="SectorDePeligro" parent="TiggersLluviaMeteoritos" instance=ExtResource( 8 )]
 position = Vector2( 1314, 1270 )
-scale = Vector2( 0.2, 0.2 )
 tipo_peligro = "Meteorito"
+
+[node name="TiggersInterceptores" type="Node2D" parent="."]
+
+[node name="SectorDePeligro" parent="TiggersInterceptores" instance=ExtResource( 8 )]
+tipo_peligro = "Enemigo"
+numero_peligros = 2
 
 [node name="ContenedorEstacion" type="Node2D" parent="."]
 
@@ -43,12 +49,18 @@ script = ExtResource( 10 )
 
 [node name="TweenCamara" type="Tween" parent="."]
 
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 546, 293 )
+
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scroll_offset = Vector2( 500, 500 )
 scroll_ignore_camera_zoom = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2( 256, 256 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 texture = ExtResource( 5 )
@@ -149,11 +161,4 @@ texture = ExtResource( 5 )
 position = Vector2( 0, 1500 )
 texture = ExtResource( 5 )
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 389, 400 )
-
-[node name="EnemigoInterceptor" parent="." instance=ExtResource( 12 )]
-position = Vector2( 610, 709 )
-
 [connection signal="tween_completed" from="TweenCamara" to="." method="_on_TweenCamara_tween_completed"]
-[connection signal="body_entered" from="Player" to="Player" method="_on_Player_body_entered"]
