@@ -29,10 +29,20 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Juego/Proyectiles/canion/Canion.gd"
 }, {
+"base": "NaveBase",
+"class": "EnemigoBase",
+"language": "GDScript",
+"path": "res://Juego/Naves/Enemigos/EnemigoBase.gd"
+}, {
 "base": "Area2D",
 "class": "EnemigoDummy",
 "language": "GDScript",
-"path": "res://Juego/Enemigos/EnemigoDummy.gd"
+"path": "res://Juego/Naves/Enemigos/EnemigoDummy.gd"
+}, {
+"base": "EnemigoBase",
+"class": "EnemigoInteceptor",
+"language": "GDScript",
+"path": "res://Juego/Naves/Enemigos/EnemigoInterceptor/EnemigoInterceptor.gd"
 }, {
 "base": "Area2D",
 "class": "Escudo",
@@ -69,12 +79,17 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Juego/Naves/Player/Motor/MotorSFX.gd"
 }, {
+"base": "RigidBody2D",
+"class": "NaveBase",
+"language": "GDScript",
+"path": "res://Juego/Naves/NaveBase.gd"
+}, {
 "base": "Node2D",
 "class": "Nivel",
 "language": "GDScript",
 "path": "res://Juego/Niveles/Nivel.gd"
 }, {
-"base": "RigidBody2D",
+"base": "NaveBase",
 "class": "Player",
 "language": "GDScript",
 "path": "res://Juego/Naves/Player/Player.gd"
@@ -104,7 +119,9 @@ _global_script_class_icons={
 "CamaraNivel": "",
 "CamaraPlayer": "",
 "Canion": "",
+"EnemigoBase": "",
 "EnemigoDummy": "",
+"EnemigoInteceptor": "",
 "Escudo": "",
 "EstacionRecarga": "",
 "Estela": "",
@@ -112,6 +129,7 @@ _global_script_class_icons={
 "Meteorito": "",
 "MeteoritoSpawner": "",
 "Motor": "",
+"NaveBase": "",
 "Nivel": "",
 "Player": "",
 "Proyectil": "",
@@ -258,6 +276,7 @@ recarga_escudo={
 2d_physics/layer_4="proyectil_player"
 2d_physics/layer_5="proyectil_enemigo"
 2d_physics/layer_6="Estacion"
+2d_physics/layer_7="Laser_Player"
 
 [physics]
 

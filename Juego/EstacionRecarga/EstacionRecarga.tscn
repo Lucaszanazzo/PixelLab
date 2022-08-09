@@ -119,6 +119,8 @@ tracks/2/keys = {
 }
 
 [node name="EstacionRecarga" type="Node2D"]
+z_index = 39
+z_as_relative = false
 script = ExtResource( 3 )
 
 [node name="AreaColision" type="Area2D" parent="."]
