@@ -6,7 +6,6 @@
 [ext_resource path="res://Juego/Proyectiles/Proyectil_Enemigo.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Juego/Proyectiles/canion/diparoenemigo.tres" type="AudioStream" id=5]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 31, 29.5 )
 

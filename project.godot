@@ -9,6 +9,16 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Area2D",
+"class": "AreaColision",
+"language": "GDScript",
+"path": "res://Juego/Base/AreaColision.gd"
+}, {
+"base": "Node2D",
+"class": "BaseEnemiga",
+"language": "GDScript",
+"path": "res://Juego/Base/BaseEnemiga.gd"
+}, {
 "base": "Camera2D",
 "class": "CamaraJuego",
 "language": "GDScript",
@@ -115,6 +125,8 @@ _global_script_classes=[ {
 "path": "res://Juego/Meteoros/SectorMeteoritos.gd"
 } ]
 _global_script_class_icons={
+"AreaColision": "",
+"BaseEnemiga": "",
 "CamaraJuego": "",
 "CamaraNivel": "",
 "CamaraPlayer": "",
@@ -277,7 +289,7 @@ recarga_escudo={
 2d_physics/layer_4="proyectil_player"
 2d_physics/layer_5="proyectil_enemigo"
 2d_physics/layer_6="Estacion"
-2d_physics/layer_7="Laser_Player"
+2d_physics/layer_7="BaseEnemiga"
 
 [physics]
 
