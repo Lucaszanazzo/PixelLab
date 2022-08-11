@@ -2,11 +2,11 @@
 
 [ext_resource path="res://Juego/Proyectiles/canion/sfx_disparo.tres" type="AudioStream" id=1]
 [ext_resource path="res://Juego/Proyectiles/canion/Canion.gd" type="Script" id=2]
-[ext_resource path="res://Juego/Proyectiles/ProyectilPlayer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Juego/Proyectiles/Proyectil_Enemigo.tscn" type="PackedScene" id=3]
 
 [node name="Canion" type="Node2D"]
 script = ExtResource( 2 )
-proyectil = ExtResource( 4 )
+proyectil = ExtResource( 3 )
 cadencia_disparo = 0.25
 velocidad_proyectil = 1000
 

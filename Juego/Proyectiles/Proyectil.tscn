@@ -19,11 +19,9 @@ z_as_relative = false
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 z_as_relative = false
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
-visible = false
 position = Vector2( 0.500002, 1.19209e-07 )
 scale = Vector2( 2.75, 0.8 )
 

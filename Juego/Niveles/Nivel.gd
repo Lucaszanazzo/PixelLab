@@ -37,6 +37,7 @@ func conectar_seniales():
 	Eventos.connect("meteorito_destruido", self, "_on_meteorito_destruido")
 	Eventos.connect("nave_en_sector_peligro", self, "_on_nave_en_sector_peligro")
 	Eventos.connect("base_destruida", self, "_on_base_destruida")
+	Eventos.connect("spawn_orbital", self, "_on_spawn_orbital")
 
 func crear_contenedores():
 	contenedor_proyectiles = Node.new()
@@ -114,7 +115,7 @@ func _on_nave_destruida(nave: Player, posicion: Vector2, num_explosiones: int) -
 	
 	crear_explosion(posicion, 1.0, num_explosiones, 0.6, Vector2(100.0, 50.0))
 
-func _on_base_destruida(pos_partes: Array) -> void:
+func _on_base_destruida(_base: Node2D, pos_partes: Array) -> void:
 	for posicion in pos_partes:
 		crear_explosion(posicion, 2.0)
 		yield(get_tree().create_timer(0.5),"timeout")
@@ -152,6 +153,8 @@ func _on_meteorito_destruido(pos: Vector2) -> void:
 	
 	controlar_meteoritos_restantes()
 
+func _on_spawn_orbital(enemigo: EnemigoOrbital) -> void:
+	contenedor_enemigos.add_child(enemigo)
 
 ## Señales internas
 func _on_TweenCamara_tween_completed(object: Object, _key: NodePath) -> void:

@@ -26,12 +26,13 @@ enemigo_interceptor = ExtResource( 12 )
 [node name="TiggersLluviaMeteoritos" type="Node2D" parent="."]
 
 [node name="SectorDePeligro" parent="TiggersLluviaMeteoritos" instance=ExtResource( 8 )]
-position = Vector2( 1344, 1032 )
+position = Vector2( 2125, -57 )
 tipo_peligro = "Meteorito"
 
 [node name="TiggersInterceptores" type="Node2D" parent="."]
 
 [node name="SectorDePeligro" parent="TiggersInterceptores" instance=ExtResource( 8 )]
+position = Vector2( 1431, -212 )
 tipo_peligro = "Enemigo"
 numero_peligros = 2
 
@@ -45,6 +46,9 @@ position = Vector2( 1343, 391 )
 [node name="BaseEnemiga" parent="ContenedorBase" instance=ExtResource( 13 )]
 position = Vector2( 63, 884 )
 
+[node name="BaseEnemiga2" parent="ContenedorBase" instance=ExtResource( 13 )]
+position = Vector2( 88, 3127 )
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource( 3 )
 
@@ -56,7 +60,7 @@ script = ExtResource( 10 )
 [node name="TweenCamara" type="Tween" parent="."]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 546, 293 )
+position = Vector2( 1522, 1852 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scroll_offset = Vector2( 500, 500 )
