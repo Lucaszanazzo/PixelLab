@@ -36,5 +36,5 @@ bus/6/name = "Estacion"
 bus/6/solo = false
 bus/6/mute = false
 bus/6/bypass_fx = false
-bus/6/volume_db = -33.989
+bus/6/volume_db = -14.0622
 bus/6/send = "Master"
