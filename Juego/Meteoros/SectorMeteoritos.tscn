@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Juego/Meteoros/MeteoritosSpawner.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Juego/Meteoros/SectorMeteoritos.gd" type="Script" id=2]
-[ext_resource path="res://Juego/Meteoros/Kenney Future2.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Juego/UI/Kenney Future2.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Juego/Meteoros/forceField_002.tres" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
