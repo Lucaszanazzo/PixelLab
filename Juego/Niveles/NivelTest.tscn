@@ -14,7 +14,7 @@
 [ext_resource path="res://Juego/Naves/Enemigos/EnemigoInterceptor/EnemigoInterceptor.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Juego/Base/BaseEnemiga.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Juego/EstacionRecarga/Rele/ReleMasa.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Juego/UI/HUD.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Juego/UI/HUD/HUD.tscn" type="PackedScene" id=15]
 
 [node name="NivelTest" type="Node2D"]
 script = ExtResource( 2 )
@@ -46,12 +46,12 @@ numero_peligros = 2
 [node name="ContenedorEstacion" type="Node2D" parent="."]
 
 [node name="EstacionRecarga" parent="ContenedorEstacion" instance=ExtResource( 11 )]
-position = Vector2( 1343, 391 )
+position = Vector2( 2682, 108 )
 
 [node name="ContenedorBase" type="Node2D" parent="."]
 
 [node name="BaseEnemiga" parent="ContenedorBase" instance=ExtResource( 13 )]
-position = Vector2( 63, 884 )
+position = Vector2( -2043, 1039 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource( 3 )

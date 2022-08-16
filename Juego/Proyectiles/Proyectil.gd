@@ -20,7 +20,8 @@ func _physics_process(delta):
 func daniar(otro_cuerpo: CollisionObject2D):
 	if otro_cuerpo.has_method("recibir_danio"):
 		otro_cuerpo.recibir_danio(danio)
-		queue_free()
+	
+	queue_free()
 
 
 ## Señales internas

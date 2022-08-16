@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/glassPanel_corners1.png-6bb28a1d11b1d3b2134cd8b4345173b1.stex"
+path="res://.import/iconoInterceptor.png-77ca6bddcb143523e32d9a270796abca.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Juego/UI/glassPanel_corners1.png"
-dest_files=[ "res://.import/glassPanel_corners1.png-6bb28a1d11b1d3b2134cd8b4345173b1.stex" ]
+source_file="res://Juego/UI/minimapa/iconos/iconoInterceptor.png"
+dest_files=[ "res://.import/iconoInterceptor.png-77ca6bddcb143523e32d9a270796abca.stex" ]
 
 [params]
 

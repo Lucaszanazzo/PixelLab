@@ -8,17 +8,17 @@ enum ESTADO {SPAWN, VIVO, INVENCIBLE, MUERTO}
 ##Atributos Export
 export var hitpoints: float = 20.0
 export var num_explosiones : int = 1
+
 ## Atributos 
 var estado_actual: int = ESTADO.SPAWN
 
-
-## Onready Atributos 
+##Atributos onready 
 onready var canion: Canion = $Canion
 onready var colisionador: CollisionShape2D = $CollisionShape2D
 onready var impacto_sfx: AudioStreamPlayer = $ImpactoSFX
 
 
-## Metodos 
+# Metodos 
 func _ready():
 	controlador_estados(estado_actual)
 
@@ -43,14 +43,14 @@ func controlador_estados(nuevo_estado: int):
 	estado_actual = nuevo_estado
 
 
-func destruir():
-	controlador_estados(ESTADO.MUERTO)
-
 func recibir_danio(danio: float):
 	hitpoints -= danio
 	if hitpoints <= 0.0:
 		destruir()
 	impacto_sfx.play()
+
+func destruir():
+	controlador_estados(ESTADO.MUERTO)
 
 
 ## Señales internas 

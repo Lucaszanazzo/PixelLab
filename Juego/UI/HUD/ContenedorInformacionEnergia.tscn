@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Juego/UI/ContenedorInformacion.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Juego/UI/ContenedorInformacionEnergia.gd" type="Script" id=2]
+[ext_resource path="res://Juego/UI/HUD/ContenedorInformacion.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Juego/UI/HUD/ContenedorInformacionEnergia.gd" type="Script" id=2]
 
 [node name="ContenedorInformacionEnergia" instance=ExtResource( 1 )]
 script = ExtResource( 2 )

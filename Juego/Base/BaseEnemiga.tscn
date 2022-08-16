@@ -135,7 +135,7 @@ tracks/2/keys = {
 "values": [ 0.0, 360.0 ]
 }
 
-[node name="BaseEnemiga" type="Node2D"]
+[node name="BaseEnemiga" type="Node2D" groups=["minimap"]]
 position = Vector2( -30, -8 )
 z_index = 40
 z_as_relative = false

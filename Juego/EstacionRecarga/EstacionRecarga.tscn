@@ -115,7 +115,7 @@ tracks/2/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 0.9, 0.9 ), Vector2( 0.95, 0.95 ), Vector2( 1, 1 ) ]
 }
 
-[node name="EstacionRecarga" type="Node2D"]
+[node name="EstacionRecarga" type="Node2D" groups=["minimap"]]
 z_index = 39
 z_as_relative = false
 script = ExtResource( 5 )
