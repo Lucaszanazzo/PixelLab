@@ -212,7 +212,7 @@ func _on_TweenCamara_tween_completed(object: Object, _key: NodePath) -> void:
 
 func _on_RestartTimer_timeout() -> void:
 	Eventos.emit_signal("nivel_terminado")
-	yield(get_tree().create_timer(1.0), "timeout")
+	yield(get_tree().create_timer(2.0), "timeout")
 	get_tree().reload_current_scene()
 
 

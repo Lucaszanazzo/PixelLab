@@ -13,6 +13,7 @@ var potencia_actual: float = 0.0
 
 ##Metodos 
 func _ready() -> void:
+	print(estado_actual)
 	Eventos.emit_signal("minimapa_objeto_creado")
 
 func _integrate_forces(state: Physics2DDirectBodyState) -> void:
@@ -28,9 +29,12 @@ func controlador_estados_ia(nuevo_estado: int) -> void:
 			canion.set_esta_disparando(false)
 			potencia_actual = 0.0
 		ESTADO_IA.ATACANDOQ:
+			#para verificar porque no dispara
 			canion.set_esta_disparando(true)
 			potencia_actual = 0.0
 		ESTADO_IA.ATACANDOP:
+			#para verificar porque no dispara
+			canion.set_puede_disparar(true)
 			canion.set_esta_disparando(true)
 			potencia_actual = potencia_max
 		ESTADO_IA.PERSECUCION:

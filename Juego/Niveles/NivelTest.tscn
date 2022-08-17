@@ -39,7 +39,7 @@ numero_peligros = 2
 [node name="TiggersInterceptores" type="Node2D" parent="."]
 
 [node name="SectorDePeligro" parent="TiggersInterceptores" instance=ExtResource( 8 )]
-position = Vector2( 1431, -212 )
+position = Vector2( 1983, 1015 )
 tipo_peligro = "Enemigo"
 numero_peligros = 2
 

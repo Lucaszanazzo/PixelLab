@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://icono_juego.png" type="Texture" id=1]
 [ext_resource path="res://Juego/UI/HUD/ContenedorInformacion.tscn" type="PackedScene" id=2]
@@ -35,12 +35,6 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
-
-[sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0.898039, 0.0392157, 0.0392157, 1 )
-
-[sub_resource type="StyleBoxLine" id=4]
-color = Color( 0.898039, 0.0392157, 0.0392157, 1 )
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource( 4 )
@@ -126,10 +120,9 @@ text = "Energia Laser
 wait_time = 2.0
 
 [node name="ProgressBar" parent="InfoLaser" index="3"]
-self_modulate = Color( 0.2, 3, 0, 1 )
 margin_right = 273.0
-custom_styles/bg = SubResource( 3 )
 value = 100.0
+percent_visible = false
 
 [node name="InfoEscudo" parent="." groups=["contenedor_info"] instance=ExtResource( 3 )]
 anchor_left = 0.992
@@ -151,10 +144,9 @@ text = "Energia Esucdo
 wait_time = 2.0
 
 [node name="ProgressBar" parent="InfoEscudo" index="3"]
-modulate = Color( 0.2, 3, 0, 1 )
 margin_right = 272.0
-custom_styles/bg = SubResource( 4 )
 value = 100.0
+percent_visible = false
 
 [node name="Minimapa" parent="." instance=ExtResource( 5 )]
 
