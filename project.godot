@@ -189,7 +189,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Metoritos"
-run/main_scene="res://Juego/Niveles/NivelTest.tscn"
+run/main_scene="res://Juego/Niveles/MenuPrincipal.tscn"
 config/icon="res://icono_juego.png"
 
 [autoload]

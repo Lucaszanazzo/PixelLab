@@ -42,12 +42,13 @@ func _unhandled_input(event: InputEvent):
 	# Control Estela y sonido motor
 	if event.is_action_pressed("mover_adelante"):
 		estela.set_max_points(estela_maxima)
-		motor_sfx.sonido_on()
 	elif event.is_action_pressed("mover_atras"):
 		estela.set_max_points(0)
-		motor_sfx.sonido_on()
+	
+		#Apagando Motor
 	if (event.is_action_released("mover_adelante") or event.is_action_released("mover_atras")):
 		motor_sfx.sonido_off()
+	
 	#Escudo 
 	if event.is_action_pressed("escudo") and not escudo.get_esta_activado():
 		escudo.activar()
@@ -62,12 +63,17 @@ func _process(_delta):
 ## Metodos custom 
 
 func player_input() -> void:
-	#Empuje
+	if not esta_input_activo():
+		return 
+	
+	#Empuje y Encencido sonido motor
 	empuje = Vector2.ZERO
 	if Input.is_action_pressed("mover_adelante"):
 		empuje = Vector2(potencia_motor, 0)
+		motor_sfx.sonido_on()
 	elif Input.is_action_pressed("mover_atras"):
 		empuje = Vector2(-potencia_motor, 0)
+		motor_sfx.sonido_on()
 	
 	# Rotacion
 	dir_rotacion = 0

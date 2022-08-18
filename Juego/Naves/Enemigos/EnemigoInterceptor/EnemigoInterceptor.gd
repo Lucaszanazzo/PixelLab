@@ -8,7 +8,7 @@ enum ESTADO_IA {IDLE, ATACANDOQ, ATACANDOP, PERSECUCION}
 export var potencia_max: float = 600.0
 
 ## Atributos 
-var estado_ia_actual: int = ESTADO_IA.IDLE
+var estado_ia_actual: int = ESTADO_IA.ATACANDOP
 var potencia_actual: float = 0.0
 
 ##Metodos 
@@ -29,12 +29,11 @@ func controlador_estados_ia(nuevo_estado: int) -> void:
 			canion.set_esta_disparando(false)
 			potencia_actual = 0.0
 		ESTADO_IA.ATACANDOQ:
-			#para verificar porque no dispara
+			#verificar porque no dispara
 			canion.set_esta_disparando(true)
 			potencia_actual = 0.0
 		ESTADO_IA.ATACANDOP:
-			#para verificar porque no dispara
-			canion.set_puede_disparar(true)
+			#verificar porque no dispara
 			canion.set_esta_disparando(true)
 			potencia_actual = potencia_max
 		ESTADO_IA.PERSECUCION:
