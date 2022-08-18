@@ -4,7 +4,7 @@
 [ext_resource path="res://Juego/Niveles/Nivel.gd" type="Script" id=2]
 [ext_resource path="res://default_env.tres" type="Environment" id=3]
 [ext_resource path="res://Juego/Explosiones/Explosion.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Juego/Niveles/Fondos/purpura_oscuro.png" type="Texture" id=5]
+[ext_resource path="res://Juego/Niveles/Fondos/StarFieldBackground.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Juego/Meteoros/Meteorito.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Juego/Explosiones/Explosion meteoro/ExplosionMeteorito.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Juego/ZonaPeligro/SectorDePeligro.tscn" type="PackedScene" id=8]
@@ -73,118 +73,11 @@ script = ExtResource( 10 )
 
 [node name="ActualizadorTimer" type="Timer" parent="."]
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-scroll_offset = Vector2( 500, 500 )
-scroll_ignore_camera_zoom = true
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-z_index = -5
-motion_mirroring = Vector2( 256, 256 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-texture = ExtResource( 5 )
-
-[node name="Sprite2" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 500, 0 )
-texture = ExtResource( 5 )
-
-[node name="Sprite3" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 1000, 0 )
-texture = ExtResource( 5 )
-
-[node name="Sprite4" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 1500, 0 )
-texture = ExtResource( 5 )
-
-[node name="Sprite5" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 1500, 500 )
-texture = ExtResource( 5 )
-
-[node name="Sprite6" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 1500, 1000 )
-texture = ExtResource( 5 )
-
-[node name="Sprite7" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 2000, 500 )
-texture = ExtResource( 5 )
-
-[node name="Sprite8" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 0, 500 )
-texture = ExtResource( 5 )
-
-[node name="Sprite9" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 0, 500 )
-texture = ExtResource( 5 )
-
-[node name="Sprite10" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 500, 500 )
-texture = ExtResource( 5 )
-
-[node name="Sprite11" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 0, 1000 )
-texture = ExtResource( 5 )
-
-[node name="Sprite12" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 2000, 1000 )
-texture = ExtResource( 5 )
-
-[node name="Sprite13" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 1000, 1000 )
-texture = ExtResource( 5 )
-
-[node name="Sprite14" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 500, 1000 )
-texture = ExtResource( 5 )
-
-[node name="Sprite15" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 1000, 500 )
-texture = ExtResource( 5 )
-
-[node name="Sprite16" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 2000, 0 )
-texture = ExtResource( 5 )
-
-[node name="Sprite17" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 2500, 0 )
-texture = ExtResource( 5 )
-
-[node name="Sprite18" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 2500, 500 )
-texture = ExtResource( 5 )
-
-[node name="Sprite19" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 2500, 1000 )
-texture = ExtResource( 5 )
-
-[node name="Sprite20" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 2500, 1500 )
-texture = ExtResource( 5 )
-
-[node name="Sprite21" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 2000, 1500 )
-texture = ExtResource( 5 )
-
-[node name="Sprite22" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 1500, 1500 )
-texture = ExtResource( 5 )
-
-[node name="Sprite23" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 1000, 1500 )
-texture = ExtResource( 5 )
-
-[node name="Sprite24" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 500, 1500 )
-texture = ExtResource( 5 )
-
-[node name="Sprite25" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 0, 1500 )
-texture = ExtResource( 5 )
-
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 1381, 985 )
+
+[node name="StarFieldBackground" parent="." instance=ExtResource( 5 )]
+color_fondo = Color( 0, 0.0156863, 0.243137, 1 )
 
 [connection signal="tween_completed" from="TweenCamara" to="." method="_on_TweenCamara_tween_completed"]
 [connection signal="timeout" from="RestartTimer" to="." method="_on_RestartTimer_timeout"]

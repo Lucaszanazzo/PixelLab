@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fondo_negro.png-2a1c252fcc3bb52ef311192269644042.stex"
+path="res://.import/star.svg-24d24aa44aa2ad722d89aa3e096c20bf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Juego/Niveles/Fondos/fondo_negro.png"
-dest_files=[ "res://.import/fondo_negro.png-2a1c252fcc3bb52ef311192269644042.stex" ]
+source_file="res://Juego/Niveles/Fondos/star.svg"
+dest_files=[ "res://.import/star.svg-24d24aa44aa2ad722d89aa3e096c20bf.stex" ]
 
 [params]
 
