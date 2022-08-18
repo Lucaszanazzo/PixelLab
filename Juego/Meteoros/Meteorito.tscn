@@ -617,9 +617,8 @@ shape = SubResource( 1 )
 
 [node name="impacto_SFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
-volume_db = -20.0
 pitch_scale = 0.68
-bus = "Impacto"
+bus = "SFX"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 3 )

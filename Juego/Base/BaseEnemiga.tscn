@@ -206,7 +206,7 @@ anims/rotar_horario = SubResource( 3 )
 
 [node name="ImpactoSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
-bus = "Impacto"
+bus = "SFX"
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
 
