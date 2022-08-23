@@ -31,10 +31,12 @@ func controlador_estados_ia(nuevo_estado: int) -> void:
 		ESTADO_IA.ATACANDOQ:
 			#verificar porque no dispara
 			canion.set_esta_disparando(true)
+			canion.set_puede_disparar(true)
 			potencia_actual = 0.0
 		ESTADO_IA.ATACANDOP:
 			#verificar porque no dispara
 			canion.set_esta_disparando(true)
+			canion.set_puede_disparar(true)
 			potencia_actual = potencia_max
 		ESTADO_IA.PERSECUCION:
 			canion.set_esta_disparando(false)

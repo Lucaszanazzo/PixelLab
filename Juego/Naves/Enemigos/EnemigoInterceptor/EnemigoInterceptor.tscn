@@ -152,7 +152,7 @@ danio_proyectil = 1
 position = Vector2( 35, -20 )
 
 [node name="PuntoDerecho" parent="Canion" index="1"]
-position = Vector2( 35, 20 )
+position = Vector2( 35, 21 )
 
 [node name="DisparoSFX" parent="Canion" index="2"]
 stream = SubResource( 7 )
@@ -169,12 +169,14 @@ texture = ExtResource( 2 )
 
 [node name="AreaDisparo" type="Area2D" parent="." index="6"]
 visible = false
+collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaDisparo" index="0"]
 shape = SubResource( 5 )
 
 [node name="AreaDeteccion" type="Area2D" parent="." index="7"]
 visible = false
+collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaDeteccion" index="0"]
 shape = SubResource( 6 )
